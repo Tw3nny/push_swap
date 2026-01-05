@@ -6,13 +6,12 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 16:15:56 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/12/23 17:14:31 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/12/31 15:09:05 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "libft/libft.h"
-# define MAX_SIZE argc - 1
 
 void	ft_error(void)
 {
@@ -22,30 +21,26 @@ void	ft_error(void)
 
 int	main(int argc, char **argv)
 {
-	int		i;
-	int		j;
-	int		stack_a[MAX_SIZE];
-	int		size_a;
-	char	*token;
+	t_data	data;
 
-	i = 1;
-	size_a = 0;
-	while (i < argc - 1)
+	data.i = 1;
+	data.size_a = 0;
+	data.size_b = 0;
+	data.stack_a = malloc(sizeof(int) * (argc - 1));
+	data.stack_b = malloc(sizeof(int) * (argc - 1));
+	if (!data.stack_a || !data.stack_b)
+		ft_error();
+	while (data.i < argc)
 	{
-		token = ft_split(argv[i], ' ');
-		if (token == NULL || token[0] == NULL)
+		data.token = ft_split(argv[data.i], ' ');
+		if (data.token == NULL || data.token[0] == NULL)
 			ft_error();
-		j = 0;
-		while (token[j])
-		{
-			if (check_valide(token) == 1) 
-				ft_error();
-			if (check_overflow(token) == 1)
-				ft_error();
-			if (check_double(token) == 1)
-				ft_error();
-		}
-		free(token);
-		i++;
+		ft_check(&data);
+		free_split(data.token);
+		data.i++;
 	}
+
+	free(data.stack_a);
+	free(data.stack_b);
+	return (0);
 }
