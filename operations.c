@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 14:39:50 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/12/31 17:23:34 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/01/09 11:26:40 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	op_pb(t_data *data)
 	}
 	data->size_a--;
 	data->size_b++;
-	write(1, "pa\n", 3);
+	write(1, "pb\n", 3);
 }
 
 // push TOP B to TOP A

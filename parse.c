@@ -6,33 +6,30 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 13:21:12 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/12/31 14:52:53 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/01/09 11:23:43 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-/* faire { c possible askip = if ..... on fait rien 
-        } */
-int	check_valide(char *token)
-{
-	int	i;
 
-	if ((token[0] == '-' || token[0] == '+') && token[1] == '\0')
-		return (1);
-	i = 0;
-	while (token[i])
-	{
-		if ((i == 0 && (token[i] == '-' || token[i] == '+')))
-		{
-		}
-		else if (ft_isdigit(token[i]))
-		{
-		}
-		else
-			return (1);
-		i++;
-	}
-	return (0);
+int check_valide(char *token)
+{
+    int i;
+
+    i = 0;
+    if (token[i] == '-' || token[i] == '+')
+    {
+        if (token[i + 1] == '\0')
+            return (1);
+        i++;
+    }
+    while (token[i])
+    {
+        if (!ft_isdigit(token[i]))
+            return (1);
+        i++;
+    }
+    return (0);
 }
 
 int	check_overflow(char *token)
@@ -69,11 +66,11 @@ void	ft_check(t_data *data)
 	while (data->token[j])
 		{
 			if (check_valide(data->token[j]) == 1)
-				ft_error();
+				ft_error_parsing(data);
 			if (check_overflow(data->token[j]) == 1)
-				ft_error();
+				ft_error_parsing(data);
 			if (check_double(data->token[j], data) == 1)
-				ft_error();
+				ft_error_parsing(data);
 			data->stack_a[data->size_a] = ft_atoi(data->token[j]);
 			data->size_a++;
 			j++;
