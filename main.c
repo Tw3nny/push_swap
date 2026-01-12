@@ -6,33 +6,12 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 16:15:56 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/01/09 11:21:46 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/01/09 16:09:04 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "libft/libft.h"
-
-void	ft_error(void)
-{
-	ft_putstr_fd("Error\n", 2);
-	exit(1);
-}
-
-void    ft_cleanup(t_data *data)
-{
-    if (data->stack_a)
-        free(data->stack_a);
-    if (data->stack_b)
-        free(data->stack_b);
-}
-
-void    ft_error_parsing(t_data *data)
-{
-    free_split(data->token);
-    ft_cleanup(data);
-    ft_error();
-}
 
 void	ft_parse_args(t_data *data, int argc, char **argv)
 {
