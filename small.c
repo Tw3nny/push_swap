@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:15:41 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/01/12 17:07:39 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/01/14 15:01:00 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,12 @@ void	sort_three(t_data *data)
 			op_sa(data);
 	}
 	else
+	{
 		if (data->stack_a[0] > data->stack_a[1])
 			op_sa(data);
+	}
 }
+
 void	min_to_top(t_data *data, int min_index)
 {
 	if (min_index <= data->size_a / 2)
@@ -70,7 +73,6 @@ void	sort_small(t_data *data)
 		op_pb(data);
 	}
 	sort_three(data);
-
 	while (data->size_b > 0)
 		op_pa(data);
 }

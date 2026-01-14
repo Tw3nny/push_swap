@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 16:32:32 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/01/12 15:33:18 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/01/14 15:07:03 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,17 @@ int	find_max_index(int *stack, int size_stack)
 }
 
 // calculate the best between rotate and reverse rotate
-int	calculate_rota_cost(int	index, int size_stack)
+int	calculate_rota_cost(int index, int size_stack)
 {
-	if ( index <= size_stack / 2)
+	if (index <= size_stack / 2)
 		return (index);
 	else
 		return (size_stack - index);
+}
+
+// push all number into B until there is 3 number in A
+void	push_but_3(t_data *data)
+{
+	while (data->size_a > 3)
+		op_pb(data);
 }

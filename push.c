@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 14:39:50 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/01/09 16:11:10 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/01/14 15:05:23 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	op_pb(t_data *data)
 {
 	int	i;
-	
+
 	if (data->size_a == 0)
 		return ;
 	i = data->size_b;
@@ -61,5 +61,3 @@ void	op_pa(t_data *data)
 	data->size_a++;
 	write(1, "pa\n", 3);
 }
-
-

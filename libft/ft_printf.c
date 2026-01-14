@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 23:33:49 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/11/13 11:24:32 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/01/14 15:15:54 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,7 @@ int	ft_printf(const char *format, ...)
 	count = 0;
 	i = 0;
 	if (!format)
-	{
-		printf("erreur");
 		return (-1);
-	}
-
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
