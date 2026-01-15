@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 16:16:34 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/01/14 15:03:35 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/01/15 15:49:37 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_data
 void	ft_error(void);
 void	ft_error_parsing(t_data *data);
 void	ft_cleanup(t_data *data);
+long	ft_atol(const char *str);
 int		check_valide(char *token);
 int		check_overflow(char *token);
 int		check_double(char *token, t_data *data);
