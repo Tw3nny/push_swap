@@ -6,13 +6,13 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 15:27:07 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/01/14 15:15:13 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/01/16 16:02:38 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// find the best position in the stack to place the B value
+// find the best position in the stack A to place the B value
 int	find_target_position(t_data *data, int value)
 {
 	int	i;
@@ -36,7 +36,7 @@ int	find_target_position(t_data *data, int value)
 	return (target_index);
 }
 
-/* calculate how many operations we need */
+/* calculate how many operations we need to place b_index in A */
 int	calculate_cost(t_data *data, int b_index)
 {
 	int	target_pos;

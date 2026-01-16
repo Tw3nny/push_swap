@@ -6,12 +6,13 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 13:42:54 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/01/14 15:22:10 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/01/16 16:04:12 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// rotate a indew until he is on top of A
 void	rotate_a_to_top(t_data *data, int target_index)
 {
 	if (target_index <= data->size_a / 2)
@@ -32,6 +33,7 @@ void	rotate_a_to_top(t_data *data, int target_index)
 	}
 }
 
+// same for B
 void	rotate_b_to_top(t_data *data, int target_index)
 {
 	if (target_index <= data->size_b / 2)

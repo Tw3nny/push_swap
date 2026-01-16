@@ -25,15 +25,13 @@ CFLAGS = -Wall -Wextra -Werror -I$(LIBFT_DIR)
 RM = rm -f
 
 # =========================
-# Rules
+# Regles
 # =========================
 all: $(NAME)
 
-# Compile libft if not already done
 $(LIBFT):
 	@$(MAKE) -C $(LIBFT_DIR)
 
-# Compile push_swap
 $(NAME): $(LIBFT) $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 
